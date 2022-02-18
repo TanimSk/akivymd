@@ -163,7 +163,7 @@ class AKDatePicker(BaseDialog, ThemableBehavior):
             self.ids.year_view.add_widget(
                 ButtonBase(text="%d" % x, on_release=self._set_year)
             )
-        for x in reversed(range(1, 13)):
+        for x in range(1, 13):
             if self.month_type == "string":
                 month = self.month_dic[str(x)]
             else:
@@ -172,7 +172,8 @@ class AKDatePicker(BaseDialog, ThemableBehavior):
             self.ids.month_view.add_widget(
                 ButtonBase(text=month, on_release=self._set_month)
             )
-        for x in reversed(range(1, 32)):
+            
+        for x in range(1, 32):
             self.ids.day_view.add_widget(
                 ButtonBase(text="%d" % x, on_release=self._set_day)
             )
